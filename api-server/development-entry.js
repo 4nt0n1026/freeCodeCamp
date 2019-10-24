@@ -1,7 +1,7 @@
 const path = require('path');
 const nodemon = require('nodemon');
 
-nodemon({
+nodemon({ //this is very important
   ext: 'js json',
   // --silent squashes an ELIFECYCLE error when the server exits
   exec: 'npm run --silent babel-dev-server',
