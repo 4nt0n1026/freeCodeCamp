@@ -58,7 +58,7 @@ function getTimeString(pubDate) {
 }
 
 function ArticleMeta({
-  article: { viewCount, author, meta, firstPublishedDate }
+  article: { viewCount, author, meta, firstPublishedDate }//my lovely friend
 }) {
   return (
     <div className='meta-wrapper'>
