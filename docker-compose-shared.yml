@@ -3,18 +3,19 @@
 # Run with:
 #   docker-compose -f docker-compose.yml -f docker-compose-shared.yml up
 #
-version: "3"
+networks: # Used by by other projects like open-api
+    shared:
+        driver: bridge
+
+version: "4"
 services:
-    db:
-        networks:
-            - shared
+    db:  
     mailhog:
+        networks:
+            - shared 
         networks:
             - shared
     freecodecamp:
         networks:
             - shared
 
-networks: # Used by by other projects like open-api
-    shared:
-        driver: bridge
